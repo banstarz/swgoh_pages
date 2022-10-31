@@ -113,3 +113,93 @@ button:hover {
     border-radius: 25px;
 
 }
+
+.auth_form {
+    position: relative;
+    left: 40%;
+    width: 20%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    text-align: left;
+}
+
+.auth_form form {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+form .txt_field {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+
+.txt_field input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+}
+
+.txt_field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.txt_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #2691d9;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label {
+    top: -5px;
+    color: #2691d9;
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:focus ~ span::before {
+    width: 100%;
+}
+
+.submit_button {
+    text-align: center;
+}
+
+input[type="submit"] {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 2px solid #709688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+    z-index: 0;
+}
+
+
+input[type="submit"]:hover {
+    border-radius: 25px;
+    background: rgba(70, 96, 88, 1);
+}
